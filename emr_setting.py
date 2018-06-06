@@ -1,5 +1,6 @@
 import os
 import math
+import sys
 import yaml
 import pprint as pp
 
@@ -68,9 +69,11 @@ def calculate_spark_settings(instance_type, num_slaves, max_executor=192):
     return ret, opt
 
 
-def main():
-    pp.pprint(calculate_spark_settings("c4.4xlarge", 4)[0])
+def main(argv):
+    if len(argv) < 3 or len(argv) > 3:
+        raise Exception("Two args are needed! (type, number nodes)")
+    pp.pprint(calculate_spark_settings(argv[1], int(argv[2]))[0])
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv)
