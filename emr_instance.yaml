@@ -1,17 +1,43 @@
 # General purpose
+m1.small: {gpu: 0, cpu: 1, memory: 1.7}
+m1.medium: {gpu: 0, cpu: 1, memory: 3.75}
+m1.large: {gpu: 0, cpu: 2, memory: 7.5}
+m1.xlarge: {gpu: 0, cpu: 4, memory: 15.0}
+m2.xlarge: {gpu: 0, cpu: 2, memory: 17.1}
+m2.2xlarge: {gpu: 0, cpu: 4, memory: 34.2}
+m2.4xlarge: {gpu: 0, cpu: 8, memory: 68.4}
+m3.xlarge: {gpu: 0, cpu: 4, memory: 15.0}
+m3.2xlarge: {gpu: 0, cpu: 8, memory: 30.0}
 m4.large: {gpu: 0, cpu: 2, memory: 8.0}
 m4.xlarge: {gpu: 0, cpu: 4, memory: 16.0}
 m4.2xlarge: {gpu: 0, cpu: 8, memory: 32.0}
 m4.4xlarge: {gpu: 0, cpu: 16, memory: 64.0}
 m4.10xlarge: {gpu: 0, cpu: 40, memory: 160.0}
 m4.16xlarge: {gpu: 0, cpu: 64, memory: 256.0}
+m5.xlarge: {gpu: 0, cpu: 4, memory: 16.0}
+m5.2xlarge: {gpu: 0, cpu: 8, memory: 32.0}
+m5.4xlarge: {gpu: 0, cpu: 16, memory: 64.0}
+m5.12xlarge: {gpu: 0, cpu: 48, memory: 192.0}
+m5.24xlarge: {gpu: 0, cpu: 96, memory: 384.0}
 
 # Compute optimized
+c1.medium: {gpu: 0, cpu: 2, memory: 1.7}
+c1.xlarge: {gpu: 0, cpu: 8, memory: 7.0}
+cc2.8xlarge: {gpu: 0, cpu: 32, memory: 60.5}
+c3.xlarge: {gpu: 0, cpu: 4, memory: 7.5}
+c3.2xlarge: {gpu: 0, cpu: 8, memory: 15.0}
+c3.4xlarge: {gpu: 0, cpu: 16, memory: 30.0}
+c3.8xlarge: {gpu: 0, cpu: 32, memory: 60.0}
 c4.large: {gpu: 0, cpu: 2, memory: 3.75}
 c4.xlarge: {gpu: 0, cpu: 4, memory: 7.5}
 c4.2xlarge: {gpu: 0, cpu: 8, memory: 15.0}
 c4.4xlarge: {gpu: 0, cpu: 16, memory: 30.0}
 c4.8xlarge: {gpu: 0, cpu: 36, memory: 60.0}
+c5.xlarge: {gpu: 0, cpu: 4, memory: 8.0}
+c5.2xlarge: {gpu: 0, cpu: 8, memory: 16.0}
+c5.4xlarge: {gpu: 0, cpu: 16, memory: 32.0}
+c5.9xlarge: {gpu: 0, cpu: 36, memory: 72.0}
+c5.18xlarge: {gpu: 0, cpu: 72, memory: 144.0}
 
 # Memory optimized
 r3.xlarge: {gpu: 0, cpu: 4, memory: 30.5}
@@ -22,9 +48,15 @@ r4.xlarge: {gpu: 0, cpu: 4, memory: 30.5}
 r4.2xlarge: {gpu: 0, cpu: 8, memory: 61.0}
 r4.4xlarge: {gpu: 0, cpu: 16, memory: 122.0}
 r4.8xlarge: {gpu: 0, cpu: 32, memory: 244.0}
+cr1.8xlarge: {gpu: 0, cpu: 32, memory: 244.0}
 r4.16xlarge: {gpu: 0, cpu: 64, memory: 488.0}
 
 # Storage optimized
+i2.xlarge: {gpu: 0, cpu: 4, memory: 30.5}
+i2.2xlarge: {gpu: 0, cpu: 8, memory: 61.0}
+i2.4xlarge: {gpu: 0, cpu: 16, memory: 122.0}
+hs1.8xlarge: {gpu: 0, cpu: 16, memory: 117.0}
+i2.8xlarge: {gpu: 0, cpu: 32, memory: 244.0}
 i3.xlarge: {gpu: 0, cpu: 4, memory: 30.5}
 i3.2xlarge: {gpu: 0, cpu: 8, memory: 61.0}
 i3.4xlarge: {gpu: 0, cpu: 16, memory: 122.0}
@@ -36,6 +68,10 @@ d2.4xlarge: {gpu: 0, cpu: 16, memory: 122.0}
 d2.8xlarge: {gpu: 0, cpu: 36, memory: 244.0}
 
 # GPU instances
+g2.2xlarge: {gpu: 0, cpu: 8, memory: 15.0}
 p2.xlarge: {gpu: 1, cpu: 4, memory: 61.0}
 p2.8xlarge: {gpu: 8, cpu: 32, memory: 488.0}
 p2.16xlarge: {gpu: 16, cpu: 64, memory: 732.0}
+p3.2xlarge: {gpu: 1, cpu: 8, memory: 61.0}
+p3.8xlarge: {gpu: 4, cpu: 32, memory: 244.0}
+p3.16xlarge: {gpu: 8, cpu: 64, memory: 488.0}
