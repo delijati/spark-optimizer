@@ -1,6 +1,6 @@
 # Spark-optimizer
 
-Optimize spark settings
+Optimize spark settings (for cluster aka yarn run)
 
 Original source: http://c2fo.io/c2fo/spark/aws/emr/2016/07/06/apache-spark-config-cheatsheet/
 
