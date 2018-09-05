@@ -14,15 +14,16 @@ Install:
 Generate settings for `c4.4xlarge` with `4` nodes:
 
     $ env/bin/python emr_setting.py c4.4xlarge 4
+
     {'spark.default.parallelism': '108',
      'spark.driver.cores': '2',
-     'spark.driver.memory': '3G',
+     'spark.driver.maxResultSize': '3481m',
+     'spark.driver.memory': '3481m',
+     'spark.driver.memoryOverhead': '614m',
      'spark.executor.cores': '2',
      'spark.executor.instances': '27',
-     'spark.executor.memory': '3G',
-     'spark.yarn.driver.memoryOverhead': '1024',
-     'spark.yarn.executor.memoryOverhead': '1024'}
-
+     'spark.executor.memory': '3481m',
+     'spark.executor.memoryOverhead': '614m'}
 
 Update instance info:
 
