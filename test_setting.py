@@ -8,10 +8,11 @@ class TestSparkSettings(unittest.TestCase):
         self.assertDictEqual(
             ret, {
                 'spark.executor.instances': "3",
-                'spark.yarn.executor.memoryOverhead': "1024",
-                'spark.executor.memory': "1G",
-                'spark.yarn.driver.memoryOverhead': "1024",
-                'spark.driver.memory': "1G",
+                'spark.executor.memoryOverhead': "384m",
+                'spark.executor.memory': "1740m",
+                'spark.driver.memoryOverhead': "384m",
+                'spark.driver.memory': "1740m",
+                'spark.driver.maxResultSize': '1740m',
                 'spark.executor.cores': "1",
                 'spark.driver.cores': "1",
                 'spark.default.parallelism': "6"
@@ -21,21 +22,12 @@ class TestSparkSettings(unittest.TestCase):
         self.assertDictEqual(
             ret, {
                 'spark.executor.instances': "31",
-                'spark.yarn.executor.memoryOverhead': "1024",
-                'spark.executor.memory': "6G",
-                'spark.yarn.driver.memoryOverhead': "1024",
-                'spark.driver.memory': "6G",
+                'spark.executor.memoryOverhead': "1075m",
+                'spark.executor.memory': "6092m",
+                'spark.driver.memoryOverhead': "1075m",
+                'spark.driver.memory': "6092m",
+                'spark.driver.maxResultSize': "6092m",
                 'spark.executor.cores': "4",
                 'spark.driver.cores': "4",
                 'spark.default.parallelism': "248"
-            })
-        self.assertDictEqual(
-            opt, {
-                'cores_executer': 4,
-                'executor_per_node': 8,
-                'mem_executer': 6,
-                'overhead_mem': 1024,
-                'sum': 6.0,
-                'unused_cores': 3,
-                'unused_mem': 3.0
             })
