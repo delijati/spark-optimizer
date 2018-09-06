@@ -5,7 +5,8 @@ from spark_optimizer.optimizer import calculate_spark_settings
 
 
 def main(argv=None):
-    argv = sys.argv
+    if not argv:
+        argv = sys.argv
     if len(argv) < 3 or len(argv) > 3:
         print("Two args are needed! (type, number nodes)")
         sys.exit(1)
