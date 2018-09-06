@@ -1,5 +1,6 @@
 import unittest
-from emr_setting import calculate_spark_settings
+
+from spark_optimizer.optimizer import calculate_spark_settings
 
 
 class TestSparkSettings(unittest.TestCase):

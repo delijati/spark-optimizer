@@ -9,12 +9,17 @@ Original source: http://c2fo.io/c2fo/spark/aws/emr/2016/07/06/apache-spark-confi
 Install:
 
     $ virtualenv env
-    $ env/bin/pip install -c req.txt
+    $ env/bin/pip install spark-optimizer
+
+Dev install:
+
+    $ virtualenv env
+    $ env/bin/pip install -e .
+
 
 Generate settings for `c4.4xlarge` with `4` nodes:
 
-    $ env/bin/python emr_setting.py c4.4xlarge 4
-
+    $ env/bin/spark-optimizer c4.4xlarge 4
     {'spark.default.parallelism': '108',
      'spark.driver.cores': '2',
      'spark.driver.maxResultSize': '3481m',
@@ -27,4 +32,4 @@ Generate settings for `c4.4xlarge` with `4` nodes:
 
 Update instance info:
 
-    $ env/bin/python emr_update.py
+    $ env/bin/python spark_optimizer/emr_update.py

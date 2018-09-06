@@ -1,10 +1,14 @@
-import ruamel.yaml
+import os
+
 import requests
+
+import ruamel.yaml
+
+here = os.path.abspath(os.path.dirname(__file__))
+FILE = os.path.join(here, "emr_instance.yaml")
 
 
 def main():
-    FILE = "emr_instance.yaml"
-
     res = requests.get(
         "https://raw.githubusercontent.com/powdahound/ec2instances.info/master/www/instances.json" # noqa
     )
