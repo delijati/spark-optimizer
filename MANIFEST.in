@@ -1,0 +1,11 @@
+include CHANGES.md
+include *.txt
+include *.ini
+include LICENSE
+include README.md
+
+recursive-include test *
+recursive-include spark_optimizer *.yaml
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
