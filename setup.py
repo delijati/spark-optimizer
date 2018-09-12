@@ -19,7 +19,7 @@ setup(
     description='Optimize AWS EMR spark settings (spark-config-cheatsheet)',
     long_description=README + '\n\n' + CHANGES,
     author='Josip Delic',
-    author_email='delijati[AT]gmx[DOT]net',
+    author_email='delijati@gmx.net',
     url='https://github.com/delijati/spark-optimizer',
     packages=find_packages(),
     include_package_data=True,

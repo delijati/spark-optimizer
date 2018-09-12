@@ -3,7 +3,7 @@
 0.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fix email
 
 
 0.1.0 (2018-09-12)
