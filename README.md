@@ -1,4 +1,7 @@
+
 # Spark-optimizer
+
+[![Build Status](https://api.travis-ci.org/delijati/spark-optimizer.svg?branch=master)](https://travis-ci.org/delijati/spark-optimizer)
 
 Optimize spark settings (for cluster aka yarn run)
 
