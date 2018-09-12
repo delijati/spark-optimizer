@@ -9,6 +9,6 @@ py==1.5.3
 pytest==3.6.1
 PyYAML==3.12
 requests==2.18.4
-ruamel.yaml==0.15.37
+ruamel.yaml==0.15.66
 six==1.11.0
 urllib3==1.22
