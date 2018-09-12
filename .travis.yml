@@ -22,6 +22,7 @@ matrix:
           dist: xenial
           sudo: true
     allow_failures:
+        - env: TOXENV=py37
         - env: TOXENV=py38
 
 install:
