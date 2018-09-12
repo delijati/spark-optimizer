@@ -1,4 +1,3 @@
-# Wire up travis
 language: python
 sudo: false
 
@@ -26,11 +25,11 @@ matrix:
         - env: TOXENV=py38
 
 install:
-  - travis_retry pip install tox
+    - travis_retry pip install tox
 
 script:
-  - travis_retry tox
+    - travis_retry tox
 
 cache:
-  directories:
-	- $HOME/.cache/pip
+    directories:
+        - $HOME/.cache/pip
