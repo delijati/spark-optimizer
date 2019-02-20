@@ -3,7 +3,8 @@
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- unpin the versions.
+- rename cli from _ to -
 
 
 0.1.1 (2018-09-12)

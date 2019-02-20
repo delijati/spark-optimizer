@@ -41,7 +41,7 @@ setup(
     tests_require=test_requirements,
     entry_points={
         "console_scripts": [
-            "spark_optimizer = spark_optimizer.cli:main",
+            "spark-optimizer = spark_optimizer.cli:main",
         ],
     }
 )
