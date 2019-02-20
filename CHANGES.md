@@ -1,6 +1,6 @@
 # CHANGES
 
-0.1.2 (unreleased)
+0.1.2 (2019-02-20)
 ------------------
 
 - unpin the versions.

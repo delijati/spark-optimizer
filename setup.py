@@ -15,7 +15,7 @@ test_requirements = [
 
 setup(
     name='spark_optimizer',
-    version='0.1.2.dev0',
+    version='0.1.2',
     description='Optimize AWS EMR spark settings (spark-config-cheatsheet)',
     long_description=README + '\n\n' + CHANGES,
     author='Josip Delic',
