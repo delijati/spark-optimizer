@@ -1,6 +1,7 @@
 import os
 
 import requests
+import collections
 
 import ruamel.yaml
 
@@ -13,8 +14,10 @@ def main():
         "https://raw.githubusercontent.com/powdahound/ec2instances.info/master/www/instances.json" # noqa
     )
 
-    with open(FILE) as f:
-        emr = ruamel.yaml.round_trip_load(f.read())
+    emr = {}
+    if os.path.exists(FILE):
+        with open(FILE) as f:
+            emr = ruamel.yaml.safe_load(f.read())
 
     inst = res.json()
 
@@ -25,9 +28,23 @@ def main():
             emr[x]["gpu"] = i["GPU"]
             emr[x]["cpu"] = i["vCPU"]
             emr[x]["memory"] = i["memory"]
+            pricing = {}
+            for k in i["pricing"]:
+                pricing_emr = i["pricing"][k].get('emr')
+                if pricing_emr:
+                    try:
+                        if "USD" in pricing_emr["currencies"]:
+                            # prcing is in $ per h
+                            pricing[k] = round(
+                                float(pricing_emr["emr"]) +
+                                float(pricing_emr["ec2"]), 2)
+                    except Exception:
+                        print(k)
+            emr[x]["pricing"] = pricing
 
-    with open(FILE, "r+") as f:
-        ruamel.yaml.round_trip_dump(emr, f, default_flow_style=True)
+    with open(FILE, "w+") as f:
+        ruamel.yaml.dump(collections.OrderedDict(sorted(emr.items())), f,
+                         default_flow_style=False)
 
 
 if __name__ == "__main__":

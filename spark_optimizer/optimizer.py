@@ -1,7 +1,7 @@
 import os
 import math
 
-import yaml
+import ruamel.yaml as yaml
 
 
 def plot(max_executor, ret):
@@ -23,19 +23,24 @@ def plot(max_executor, ret):
     plt.show()
 
 
-def calculate_spark_settings(instance_type, num_slaves, max_executor=192):
+def load_emr_instance():
+    root = os.path.dirname(os.path.abspath(__file__))
+    FILE = os.path.join(root, "emr_instance.yaml")
+    with open(FILE) as f:
+        ret = yaml.safe_load(f)
+    return ret
+
+
+def calculate_spark_settings(instance_type, num_slaves, max_executor=192,
+                             memory_overhead_coefficient=0.15):
     """
     More info:
 
     http://c2fo.io/c2fo/spark/aws/emr/2016/07/06/apache-spark-config-cheatsheet/
     """
-    root = os.path.dirname(os.path.abspath(__file__))
-    FILE = os.path.join(root, "emr_instance.yaml")
-    with open(FILE) as f:
-        all_instances = yaml.load(f)
+    all_instances = load_emr_instance()
     inst = all_instances[instance_type]
 
-    memory_overhead_coefficient = 0.15
     executor_memory_upper_bound = 64
     executor_core_upper_bound = 5
     available_memory = inst["memory"] - 1

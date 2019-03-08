@@ -3,13 +3,15 @@
 0.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- add emr cost to yaml
+- export load yaml file
+- make ``memory_overhead_coefficient`` editable
 
 
 0.1.2 (2019-02-20)
 ------------------
 
-- unpin the versions.
+- unpin the versions
 - rename cli from _ to -
 
 
