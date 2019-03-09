@@ -30,16 +30,7 @@ def main():
             emr[x]["memory"] = i["memory"]
             pricing = {}
             for k in i["pricing"]:
-                pricing_emr = i["pricing"][k].get('emr')
-                if pricing_emr:
-                    try:
-                        if "USD" in pricing_emr["currencies"]:
-                            # prcing is in $ per h
-                            pricing[k] = round(
-                                float(pricing_emr["emr"]) +
-                                float(pricing_emr["ec2"]), 2)
-                    except Exception:
-                        print(k)
+                pricing[k] = i["pricing"][k].get('emr')
             emr[x]["pricing"] = pricing
 
     with open(FILE, "w+") as f:

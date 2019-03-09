@@ -3,7 +3,7 @@
 0.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- add ec2 and emr cost to yaml
 
 
 0.1.3 (2019-03-08)
