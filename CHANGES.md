@@ -1,6 +1,6 @@
 # CHANGES
 
-0.1.4 (unreleased)
+0.1.4 (2019-03-10)
 ------------------
 
 - add ec2 and emr cost to yaml
