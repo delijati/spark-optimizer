@@ -3,13 +3,13 @@
 0.1.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- fix docs
 
 
 0.1.5 (2019-12-09)
 ------------------
 
-- update `emr_instance.yaml`
+- update ``emr_instance.yaml``
 
 
 0.1.4 (2019-03-10)
