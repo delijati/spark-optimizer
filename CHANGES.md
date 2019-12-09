@@ -3,7 +3,7 @@
 0.1.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- set `long_description_content_type="text/markdown"`
 
 
 0.1.6 (2019-12-09)
