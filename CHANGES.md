@@ -3,7 +3,7 @@
 0.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- update `emr_instance.yaml`
 
 
 0.1.4 (2019-03-10)
