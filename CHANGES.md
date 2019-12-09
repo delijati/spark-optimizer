@@ -1,6 +1,6 @@
 # CHANGES
 
-0.1.7 (unreleased)
+0.1.7 (2019-12-09)
 ------------------
 
 - set `long_description_content_type="text/markdown"`
