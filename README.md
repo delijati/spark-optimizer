@@ -23,6 +23,7 @@ Dev install:
 Generate settings for `c4.4xlarge` with `4` nodes:
 
     $ env/bin/spark-optimizer c4.4xlarge 4
+    Optimal numPartitions: 162 
     {'spark.default.parallelism': '108',
      'spark.driver.cores': '2',
      'spark.driver.maxResultSize': '3481m',
