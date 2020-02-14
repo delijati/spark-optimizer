@@ -1,6 +1,6 @@
 # CHANGES
 
-0.1.8 (unreleased)
+0.1.8 (2020-02-14)
 ------------------
 
 - add calculation for `numPartitions`
