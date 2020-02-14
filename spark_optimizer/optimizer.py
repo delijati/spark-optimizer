@@ -1,5 +1,6 @@
 import os
 import math
+import sys
 
 import ruamel.yaml as yaml
 
@@ -32,7 +33,8 @@ def load_emr_instance():
 
 
 def calculate_spark_settings(instance_type, num_slaves, max_executor=192,
-                             memory_overhead_coefficient=0.15):
+                             memory_overhead_coefficient=0.15,
+                             num_partitions_factor=3):
     """
     More info:
 
@@ -81,6 +83,11 @@ def calculate_spark_settings(instance_type, num_slaves, max_executor=192,
     executer_instances = (opt["executor_per_node"] * num_slaves) - 1
     parallelism = (
         executer_instances * opt["cores_executer"] * parallelism_per_core)
+
+    num_partitions = int(opt["cores_executer"] * executer_instances
+                         * num_partitions_factor)
+
+    print("Optimal numPartitions: %s " % num_partitions, file=sys.stderr)
 
     ret = {
         "spark.executor.instances": str(executer_instances),
