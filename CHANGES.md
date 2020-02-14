@@ -3,7 +3,8 @@
 0.1.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- add calculation for `numPartitions`
+- dropping pypy and python3.4
 
 
 0.1.7 (2019-12-09)
